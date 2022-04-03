@@ -7,6 +7,10 @@ class SizePizza(models.Model):
     def __str__(self):
         return self.size
     
+    class Meta:
+        verbose_name = 'Размер пиццы'
+        verbose_name_plural = 'Размер пиццы'
+    
     
 class Dough(models.Model):
     dough = models.CharField(verbose_name='Тип пиццы', max_length=30)
@@ -14,12 +18,20 @@ class Dough(models.Model):
     def __str__(self):
         return self.dough
     
+    class Meta:
+        verbose_name = 'Тип пиццы'
+        verbose_name_plural = 'Тип пиццы'
+    
     
 class Discount(models.Model):
     discount = models.CharField(verbose_name='Скидка', max_length=10)
     
     def __str__(self):
         return self.discount
+    
+    class Meta:
+        verbose_name = 'Скидка'
+        verbose_name_plural = 'Скидки'
     
 
 class Pizza(models.Model):
@@ -50,8 +62,9 @@ class Drinks(models.Model):
         return self.name
     
     class Meta:
-        verbose_name = 'ModelName'
-        verbose_name_plural = 'ModelNames'
+        verbose_name = 'Напиток'
+        verbose_name_plural = 'Напитоки'
+        
         
 class Order(models.Model):
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
@@ -61,3 +74,6 @@ class Order(models.Model):
     def __str__(self):
         return self.pizza
     
+    class Meta:
+        verbose_name = 'Заказ'
+        verbose_name_plural = 'Заказы'
