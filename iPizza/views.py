@@ -115,7 +115,6 @@ class FoodCreateView(generics.CreateAPIView):
 class FoodListView(generics.ListAPIView):
     serializer_class = FoodSerializer
     queryset = Food.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
 
 
 class FoodDetailView(generics.RetrieveAPIView):
@@ -167,7 +166,6 @@ class PizzaCreateView(generics.CreateAPIView):
 class PizzaListView(generics.ListAPIView):
     serializer_class = PizzaSerializer
     queryset = Pizza.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
 
 
 class PizzaDetailView(generics.RetrieveAPIView):

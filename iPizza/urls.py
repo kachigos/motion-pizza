@@ -34,11 +34,11 @@ urlpatterns = [
     path('drinks-delete/<int:pk>/', DrinksDeleteView.as_view()),
     path('drinks-update/<int:pk>/', DrinksUpdateView.as_view()),
 
-    path('foot-create/', FoodCreateView.as_view()),
-    path('foot-list/', FoodListView.as_view()),
-    path('foot-detail/<int:pk>/', FoodDetailView.as_view()),
-    path('foot-update/<int:pk>/', FoodUpdateView.as_view()),
-    path('foot-delete/<int:pk>/', FoodDeleteView.as_view()),
+    path('food-create/', FoodCreateView.as_view()),
+    path('food-list/', FoodListView.as_view()),
+    path('food-detail/<int:pk>/', FoodDetailView.as_view()),
+    path('food-update/<int:pk>/', FoodUpdateView.as_view()),
+    path('food-delete/<int:pk>/', FoodDeleteView.as_view()),
 
     path('order-create/', OrderCreateView.as_view()),
     path('order-list/', OrderlistView.as_view()),
