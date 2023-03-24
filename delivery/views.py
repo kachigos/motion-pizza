@@ -12,7 +12,7 @@ class DeliveryCreateView(generics.CreateAPIView):
 class DeliveryListView(generics.ListAPIView):
     serializer_class = DeliverySerializer
     queryset = Delivery.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 
 class DeliveryUpdateView(generics.UpdateAPIView):
