@@ -11,7 +11,7 @@ class SizePizzaCreateView(generics.CreateAPIView):
 class SizePizzaListView(generics.ListAPIView):
     serializer_class = SizePizzaSerializer
     queryset = SizePizza.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 
 class SizePizzaUpdateView(generics.UpdateAPIView):
@@ -37,7 +37,7 @@ class DoughCreateView(generics.CreateAPIView):
 class DoughListView(generics.ListAPIView):
     serializer_class = DoughSerializer
     queryset = Dough.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 
 class DoughDeleteView(generics.DestroyAPIView):
@@ -63,7 +63,7 @@ class DiscountCreateView(generics.CreateAPIView):
 class DiscountListView(generics.ListAPIView):
     serializer_class = DiscountSerializer
     queryset = Discount.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 
 class DiscountUpdateView(generics.UpdateAPIView):
@@ -89,7 +89,7 @@ class DrinksCreateView(generics.CreateAPIView):
 class DrinksListView(generics.ListAPIView):
     serializer_class = DrinksSerializer
     queryset = Drinks.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 
 class DrinksDetailView(generics.RetrieveAPIView):
@@ -140,7 +140,7 @@ class OrderCreateView(generics.CreateAPIView):
 class OrderlistView(generics.ListAPIView):
     serializer_class = OrderSerializer
     queryset = Order.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 
 class OrderDetailView(generics.RetrieveAPIView):
@@ -191,7 +191,7 @@ class StockMainCreateView(generics.CreateAPIView):
 class StockMainListView(generics.ListAPIView):
     serializer_class = StockMainSerializer
     queryset = StockMain.objects.all()
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
 
 
 class StockMainDetailView(generics.RetrieveAPIView):
